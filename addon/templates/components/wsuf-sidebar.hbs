@@ -1,0 +1,19 @@
+<header class="sidebar-header">
+    {{#link-to homeRoute id="wsu-signature"}}Washington State University{{/link-to}}
+</header>
+
+<section class="swing">
+    <ul class="list-unstyled components">
+        <li class="active show">
+            {{#nav-link-to homeRoute class="show"}}Home{{/nav-link-to}}
+        </li>
+
+        {{#each apps as |app|}}
+            {{#if (not app.hidden)}}
+                {{sidebar-item link=app.linkUrl label=app.label}}
+            {{/if}}
+        {{/each}}
+
+    </ul>
+</section>
+<a href="https://wsu.co1.qualtrics.com/jfe/form/SV_5nHMZigv6omqcEB" target="_blank" rel="noopener noreferrer" style="display: none">Tell Us How We're Doing</a>
