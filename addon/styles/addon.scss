@@ -1,19 +1,17 @@
 #sidebar {
-    background: #23282b;
-    color: #fff;
-    transition: all 0.3s;
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    position: fixed;
-    left: 0;
-    height: 100vh;
-    z-index: 99;
-  }
-  
-  #sidebar .sidebar-header {
+  background: #23282b;
+  color: #fff;
+  transition: all 0.3s;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  z-index: 99;
+  .sidebar-header {
     padding: 20px;
-     #wsu-signature {
+    #wsu-signature {
       background-image:url(/images/sidebar-logo.svg);
       background-repeat: no-repeat;
       background-position: center center;
@@ -28,12 +26,8 @@
       z-index: 99;
     }
   }
-  
-  .swing {
-    perspective: 100px;
-  }
-  
-  #sidebar ul.components {
+
+  ul.components {
     padding: 0;
     margin: 0;
     border-bottom: 1px solid rgba(255,255,255,.1);
@@ -71,39 +65,74 @@
       }
     }
   }
-  
-  #sidebar a {
-    line-height: 0.7em;
-    font-family: "Lucida Sans Unicode";
-    color: #fff;
-    padding: 20px;
-    padding-left: 35px;
-    font-size: 0.9em;
-    display: block;
-    text-decoration: none !important;
-    &:hover {
-      font-weight: bold;
+
+  ul {
+    p {
+      color: #fff;
+      padding: 10px;
+    }
+    li a {
+      color: #d7dadb;
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
       text-decoration: none !important;
+      &:hover{
+        font-weight: bold;
+        text-decoration: none !important;
+      }
     }
   }
-  
-  #sidebar ul p {
-    color: #fff;
-    padding: 10px;
-  }
-  
-  #sidebar ul li a {
-    color: #d7dadb;
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-    text-decoration: none !important;
-  }
-  #sidebar ul li a:hover {
+}
+
+.swing {
+  perspective: 100px;
+}
+
+#sidebar a {
+  line-height: 0.7em;
+  font-family: "Lucida Sans Unicode";
+  color: #fff;
+  padding: 20px;
+  padding-left: 35px;
+  font-size: 0.9em;
+  display: block;
+  text-decoration: none !important;
+  &:hover {
     font-weight: bold;
     text-decoration: none !important;
   }
-  
-  #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-  }
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+}
+
+.wsuf-sidenav {
+  overflow: hidden;
+  outline: none;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+  content: '\e259';
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: 'Glyphicons Halflings';
+  font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+  content: '\e260';
+}
+
+.logout {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: unset !important;
+}
