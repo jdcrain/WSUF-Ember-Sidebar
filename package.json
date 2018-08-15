@@ -21,9 +21,9 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "ember-bootstrap": "^2.0.0",
     "ember-cli-babel": "^6.6.0",
+    "ember-cli-bootstrap-css": "^0.2.0",
+    "ember-cli-bootstrap-fonts": "^0.2.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^7.1.7",
     "ember-concurrency": "^0.8.19",

@@ -133,30 +133,15 @@ a[aria-expanded="true"]::before {
 .logout {
   position: relative;
   height: 30px;
+  &:hover {
+    font-weight: bold;
+  }
   a {
+    padding-left: 20px !important;
     position: relative;
     background-color: transparent !important;
     border: none !important;
     outline: none !important;
     box-shadow: unset !important;
-    cursor: pointer;
-    width: auto;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    text-align: center;
-  }
-  :hover {
-    font-weight: bold;
-  }
-}
-
-.glyphicon {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  vertical-align: middle;
-  &.glyphicon-off {
-    color: white;
-    content: url(/wsuf-sidebar/images/power-icon-sm.png);
   }
 }
