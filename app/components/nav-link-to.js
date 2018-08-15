@@ -1,0 +1,1 @@
+export { default } from 'wsuf-sidebar/components/nav-link-to';

@@ -12,7 +12,7 @@
   .sidebar-header {
     padding: 20px;
     #wsu-signature {
-      background-image:url(/images/sidebar-logo.svg);
+      background-image:url(/wsuf-sidebar/images/sidebar-logo.svg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 150px auto;
@@ -135,4 +135,19 @@ a[aria-expanded="true"]::before {
   border: none !important;
   outline: none !important;
   box-shadow: unset !important;
+  cursor: pointer;
+}
+
+.glyphicon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  vertical-align: middle;
+  &.glyphicon-off {
+    color: white;
+    content: url(/wsuf-sidebar/images/power-icon-sm.png);
+  }
+  &:hover {
+    font-weight: bold;
+  }
 }

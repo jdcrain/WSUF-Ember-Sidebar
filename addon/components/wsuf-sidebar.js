@@ -45,6 +45,6 @@ export default Component.extend({
   }).drop(),
 
   fetchApps: task(function * (url) {
-    return fetch(url);
+    return yield fetch(url);
   }).drop()
 });
