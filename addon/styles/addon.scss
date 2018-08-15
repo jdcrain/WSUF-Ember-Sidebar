@@ -131,11 +131,23 @@ a[aria-expanded="true"]::before {
 }
 
 .logout {
-  background-color: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: unset !important;
-  cursor: pointer;
+  position: relative;
+  height: 30px;
+  a {
+    position: relative;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: unset !important;
+    cursor: pointer;
+    width: auto;
+    left: 32%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  :hover {
+    font-weight: bold;
+  }
 }
 
 .glyphicon {
@@ -146,8 +158,5 @@ a[aria-expanded="true"]::before {
   &.glyphicon-off {
     color: white;
     content: url(/wsuf-sidebar/images/power-icon-sm.png);
-  }
-  &:hover {
-    font-weight: bold;
   }
 }
