@@ -27,15 +27,15 @@ export default Component.extend({
     yield race([resp, timeout(30000)]);
     
     if (resp.isSuccessful) {
-        let apps = yield resp.json();
+      let apps = yield resp._result.json();
 
-        let appList = [];
+      let appList = [];
 
-        for (let i = 0; i < apps.length; i++) {
-            appList.addObject(apps[i]);
-            context.set('apps', appList);
-            yield timeout(100);
-        }
+      for (let i = 0; i < apps.length; i++) {
+          appList.addObject(apps[i]);
+          context.set('apps', appList);
+          yield timeout(100);
+      }
     }
     else {
         resp.cancel();
