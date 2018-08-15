@@ -141,9 +141,9 @@ a[aria-expanded="true"]::before {
     box-shadow: unset !important;
     cursor: pointer;
     width: auto;
-    left: 32%;
     padding-left: 0 !important;
     padding-right: 0 !important;
+    text-align: center;
   }
   :hover {
     font-weight: bold;
