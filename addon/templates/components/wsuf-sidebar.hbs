@@ -9,7 +9,7 @@
         <li class="active show">
             {{#if homeRoute}}
                 {{#nav-link-to homeRoute class="show"}}Home{{/nav-link-to}}
-            {{#elseif homeUrl}}
+            {{else if homeUrl}}
                 <a href={{homeUrl}} target="_blank" rel="noopener noreferrer">Home</a>
             {{/if}}
         </li>
