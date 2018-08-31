@@ -13,9 +13,9 @@ export default Component.extend({
 
   didUpdateAttrs() {
     this._super(...arguments);
-    let userId = this.get('userId');
+    const userId = this.get('userId');
     if (userId) {
-        this.get('getApps').perform(userId);
+      this.get('getApps').perform(userId);
     }
   },
 
@@ -28,20 +28,22 @@ export default Component.extend({
     
     if (resp.isSuccessful) {
       let apps = yield resp._result.json();
+      const currentApps = this.get('apps');
+      
+      if (!currentApps || currentApps.length != apps.length) {
+        let appList = [];
 
-      let appList = [];
-
-      for (let i = 0; i < apps.length; i++) {
+        for (let i = 0; i < apps.length; i++) {
           appList.addObject(apps[i]);
           context.set('apps', appList);
           yield timeout(100);
+        }
       }
     }
     else {
-        resp.cancel();
-        this.set('apps', []);
+      resp.cancel();
+      this.set('apps', []);
     }
-
   }).drop(),
 
   fetchApps: task(function * (url) {
