@@ -7,7 +7,11 @@
 <section class="swing">
     <ul class="list-unstyled components">
         <li class="active show">
-            {{#nav-link-to homeRoute class="show"}}Home{{/nav-link-to}}
+            {{#if homeRoute}}
+                {{#nav-link-to homeRoute class="show"}}Home{{/nav-link-to}}
+            {{#elseif homeUrl}}
+                <a href={{homeUrl}} target="_blank" rel="noopener noreferrer">Home</a>
+            {{/if}}
         </li>
 
         {{#each apps as |app|}}
